@@ -28,8 +28,12 @@ public class MainActivity extends AppCompatActivity {
             goToCalculation(String.valueOf(output));
         }
         else if (view.getId() == R.id.buttondiv) {
-            output = firstNum / secondNum;
-            goToCalculation(String.valueOf(output));
+            if (secondNum == 0) {
+                goToCalculation(String.valueOf(output));
+            } else {
+                output = firstNum / secondNum;
+                goToCalculation(String.valueOf(output));
+            }
         } else {
             goToCalculation(String.valueOf(output));
         }
